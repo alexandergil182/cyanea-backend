@@ -1,0 +1,54 @@
+info:
+  name: Crear Venta
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{api_url_local}}/v1/api/ventas/"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"cliente_id\": \"464decdc-8c82-4ece-acef-b0abaf09cfc8\",\r
+
+      \    \"estado\": \"CONFIRMADA\",\r
+
+      \    \"detalles\": [\r
+
+      \      {\r
+
+      \        \"producto\": \"0d15440f-e597-42f1-a216-da6133ab21dd\",\r
+
+      \        \"cantidad\": 2,\r
+
+      \        \"tipo_precio\": \"MAYORISTA\"\r
+
+      \      }\r
+
+      \    ],\r
+
+      \    \"pagos\": [\r
+
+      \      {\r
+
+      \        \"metodo\": 1,\r
+
+      \        \"monto\": 2500000,\r
+
+      \        \"estado\": \"APROBADO\"\r
+
+      \      }\r
+
+      \    ]\r
+
+      \  }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0OTI3Mzc2NDkzLCJpYXQiOjE3NzM3NzY0OTMsImp0aSI6IjUxZjIyMjI3NjY2ZDQ2OGJhZTIxNGRmMzNiYTVjN2QzIiwidXNlcl9pZCI6IjhlNzMyMDVkLTdhMzEtNDkwOS1iMWEzLWIzMDM3NGM2YTM3OCJ9.rijnEVvNarZ7FrErnuRjrt_G2NYiAZ1UHaD5Cesz5MY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

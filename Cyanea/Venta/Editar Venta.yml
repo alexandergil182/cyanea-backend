@@ -1,0 +1,38 @@
+info:
+  name: Editar Venta
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{api_url_local}}/v1/api/ventas/07af2448-520f-425d-859e-398473ef6961/"
+  body:
+    type: json
+    data: |-
+      {
+          "cliente_id": "464decdc-8c82-4ece-acef-b0abaf09cfc8",
+          "estado": "CONFIRMADA",
+          "detalles": [
+            {
+              "producto": "0d15440f-e597-42f1-a216-da6133ab21dd",
+              "cantidad": 3,
+              "tipo_precio": "MAYORISTA"
+            }
+          ],
+          "pagos": [
+            {
+              "metodo": 1,
+              "monto": 2500000,
+              "estado": "APROBADO"
+            }
+          ]
+        }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0OTI3Mzc2NDkzLCJpYXQiOjE3NzM3NzY0OTMsImp0aSI6IjUxZjIyMjI3NjY2ZDQ2OGJhZTIxNGRmMzNiYTVjN2QzIiwidXNlcl9pZCI6IjhlNzMyMDVkLTdhMzEtNDkwOS1iMWEzLWIzMDM3NGM2YTM3OCJ9.rijnEVvNarZ7FrErnuRjrt_G2NYiAZ1UHaD5Cesz5MY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

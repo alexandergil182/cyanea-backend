@@ -1,0 +1,27 @@
+info:
+  name: Crear Detalle Venta
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{api_url_local}}/v1/api/detalles-venta/"
+  body:
+    type: json
+    data: |-
+      { 
+
+        "venta": "f4ff7758-af0c-4252-a0d3-fd345fdf896a", 
+        "producto": "0d15440f-e597-42f1-a216-da6133ab21dd", 
+        "cantidad": 9, 
+        "tipo_precio": "MAYORISTA" 
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0OTI3Mzc2NDkzLCJpYXQiOjE3NzM3NzY0OTMsImp0aSI6IjUxZjIyMjI3NjY2ZDQ2OGJhZTIxNGRmMzNiYTVjN2QzIiwidXNlcl9pZCI6IjhlNzMyMDVkLTdhMzEtNDkwOS1iMWEzLWIzMDM3NGM2YTM3OCJ9.rijnEVvNarZ7FrErnuRjrt_G2NYiAZ1UHaD5Cesz5MY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

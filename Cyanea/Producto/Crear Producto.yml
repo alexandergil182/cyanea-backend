@@ -1,0 +1,34 @@
+info:
+  name: Crear Producto
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{api_url_local}}/v1/api/productos/"
+  body:
+    type: json
+    data: "{\r
+
+      \   \"nombre\":\"Mantequilla Corporal Ultrahidratante Cyanea Maracuya Experiencia Citrica\",\r
+
+      \   \"descripcion\":\"Nuestra mantequilla corporal está formulada con manteca de karité y aceites naturales para hidratar profundamente la piel. Apta para todo tipo de pieles.\",\r
+
+      \   \"sku\":\"CYA-MAN-MAR-001\",\r
+
+      \   \"codigo_barras\":\"2991234567891\",\r
+
+      \   \"activo\":true,\r
+
+      \   \"categoria\":\"453ec590-644b-42af-a57a-8c3d0cfcd28b\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0OTI1MjA4Njc5LCJpYXQiOjE3NzE2MDg2NzksImp0aSI6IjI1N2VhODQzODQ4YzQ4NmZiZjM1MTU5OWI0MDc2NTI1IiwidXNlcl9pZCI6IjhlNzMyMDVkLTdhMzEtNDkwOS1iMWEzLWIzMDM3NGM2YTM3OCJ9.Uwq16RhD7s6gn56BcsUxJBz8lte5WnlbeAjKFQllU7A
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

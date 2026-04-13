@@ -1,0 +1,7 @@
+info:
+  name: Venta
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit

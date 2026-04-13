@@ -1,0 +1,30 @@
+info:
+  name: Crear Precio Producto
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{api_url_local}}/v1/api/precios-productos/"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"producto\": \"8664e5be-b034-40bd-8354-0f02b295db0d\",\r
+
+      \    \"tipo\": \"MAYORISTA\",\r
+
+      \    \"valor\": \"950000\",\r
+
+      \    \"activo\": true\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0OTI3Mzc2NDkzLCJpYXQiOjE3NzM3NzY0OTMsImp0aSI6IjUxZjIyMjI3NjY2ZDQ2OGJhZTIxNGRmMzNiYTVjN2QzIiwidXNlcl9pZCI6IjhlNzMyMDVkLTdhMzEtNDkwOS1iMWEzLWIzMDM3NGM2YTM3OCJ9.rijnEVvNarZ7FrErnuRjrt_G2NYiAZ1UHaD5Cesz5MY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

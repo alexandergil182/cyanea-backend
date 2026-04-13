@@ -1,0 +1,22 @@
+info:
+  name: Editar Producto
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{api_url_local}}/v1/api/productos/cdd0f880-626c-48fc-b4d5-614afc7392be/"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nombre\": \"Mantequilla Corporal Ultrahidratante Cyanea Fresa Moon2\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
